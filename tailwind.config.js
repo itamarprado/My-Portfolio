@@ -8,6 +8,10 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['Lato', 'sans-serif']
+      },
+      backgroundImage: {
+        'presentation': "url(images/presentation-bg.jpg)"
+        
       }
     },
   },
