@@ -18,7 +18,7 @@ const Presentation = () => {
                 Improving your business
             </div>
             {/* Social media */}
-            <div className="flex absolute -bottom-8 gap-5 items-center">
+            <div className="flex absolute -bottom-3 gap-5 items-center">
                     <FaGithub size={30}/>
                     <FaTelegram size={30}/>
                     <FaDiscord size={30}/>
