@@ -11,7 +11,9 @@ export default {
       },
       backgroundImage: {
         'presentation': "url(images/presentation-bg.jpg)"
-        
+      },
+      animation: {
+        'bounce-slow': 'bounce 2s infinite'
       }
     },
   },
