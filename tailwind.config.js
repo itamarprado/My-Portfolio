@@ -13,7 +13,14 @@ export default {
         'presentation': "url(images/presentation-bg.jpg)"
       },
       animation: {
-        'bounce-slow': 'bounce 2s infinite'
+        'bounce-slow': 'bounce 2s infinite',
+        'infinite-scroll': 'infinite-scroll 15s infinite linear'
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0%)' },
+          to: { transform: 'translateX(-100%)' },
+        }
       }
     },
   },
