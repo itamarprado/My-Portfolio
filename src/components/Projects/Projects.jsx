@@ -3,7 +3,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col mt-8">
+    <div className="flex flex-col">
       <div className="flex flex-col px-5 pb-8">
         <div className="w-[1px] h-12 mb-2 bg-white self-center"></div>
         <div className="self-center">
