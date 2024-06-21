@@ -7,9 +7,8 @@ const Presentation = () => {
         <div className="flex flex-col w-full min-h-80 bg-opacity-75 bg-gradient-to-b from-transparent to-neutral-900 items-center justify-center">
             {/* Title */}
             <div className="flex flex-col w-3/4 self-center pb-5">
-                <h1 className="text-5xl font-bold self-start">
+                <h1 className="text-5xl font-bold self-start w-max bg-gradient-to-r from-blue-700 via-blue-500-500 to-cyan-300 bg-[length:40%_6px] bg-left-bottom bg-no-repeat pb-[6px]">
                     Front-End
-                    <div className="w-14 h-1 bg-blue-300"></div>
                 </h1>
                 <h1 className="text-5xl font-bold self-end"><span className="text-blue-300">Dev</span>eloper</h1>
             </div>
