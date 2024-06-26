@@ -7,7 +7,7 @@ const Presentation = () => {
         {/* Gradient */}
         <div className="flex flex-col w-full h-[100vh] bg-gradient-to-b from-transparent to-neutral-900 items-center justify-center px-5">
             {/* First section (Social, Presentation) */}
-            <div className="flex flex-col max-w-[1200px] md:flex-row items-center">
+            <div className="flex flex-col w-full max-w-[1200px] md:flex-row items-center">
                 {/* Text content */}
                 <div className="md:flex-start md:max-w-[50%]">
                     <div className="flex gap-5 items-start w-full pb-2">
