@@ -78,6 +78,14 @@ const SkillScroll = () => {
           </div>
         ))}
       </div>
+      <div className="inline-flex animate-infinite-scroll">
+        {data.map((skill) => (
+          <div key={skill.id} className="flex flex-col gap-1 items-center mx-4 hover:text-blue-400">
+            <div className="text-4xl">{skill.icon}</div>
+            <p className="">{skill.name}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
