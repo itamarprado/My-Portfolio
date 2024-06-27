@@ -29,9 +29,9 @@ const Contact = () => {
           <p className="text-sm py-3">
             Feel free to use any of my social media to contact me.
           </p>
-          <div className="flex flex-col w-full lg:flex-row lg:gap-2 lg:justify-between lg:max-w-[80%] self-center">
+          <div className="flex flex-col w-full lg:flex-row lg:gap-2 lg:justify-between self-center">
             {/* Social Media */}
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center lg:w-2/5">
               <div className="flex items-center justify-center text-neutral-400">
                 <TbClick />
                 <p className="text-sm">Click to open</p>
@@ -52,7 +52,7 @@ const Contact = () => {
                 </SocialMedia>
               </div>
             </div>
-            <div className="flex items-center justify-center text-blue-400 gap-3">
+            <div className="flex items-center justify-center text-blue-400 gap-3 lg:w-1/5">
               <div className="w-8 h-[1px] bg-white"></div>
               <p className="text-xs">OR</p>
               <div className="w-8 h-[1px] bg-white"></div>
