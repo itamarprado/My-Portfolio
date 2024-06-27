@@ -2,7 +2,7 @@ import SkillScroll from "../SkillScroll/SkillScroll"
 
 const Skills = () => {
   return (
-    <div className="flex justify-center w-full px-5">
+    <div id="Skills" className="flex justify-center w-full px-5">
       <div className="w-full max-w-[1200px] pb-2 flex flex-col">
           {/* Description */}
           
