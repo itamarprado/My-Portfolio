@@ -21,6 +21,9 @@ export default {
           from: { transform: 'translateX(0%)' },
           to: { transform: 'translateX(-100%)' },
         }
+      },
+      colors: {
+       'midnight': '#1E1E1E',
       }
     },
   },
