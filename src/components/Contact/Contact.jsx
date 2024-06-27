@@ -21,7 +21,7 @@ const SocialMedia = tw.div`
 const Contact = () => {
   return (
     <div id="Contact" className="flex w-full justify-center px-5 pb-10">
-      <div className="w-full max-w-[1200px]">
+      <div className="w-full max-w-5xl">
         <div className="flex flex-col">
           <h1 className="w-max text-3xl font-bold bg-gradient-to-r from-blue-700 via-blue-500-500 to-cyan-300 bg-[length:80%_6px] bg-left-bottom bg-no-repeat pb-[6px]">
             Contact

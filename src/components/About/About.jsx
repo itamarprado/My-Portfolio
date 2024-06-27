@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div id="About" className="flex justify-center w-full px-5">
-      <div className="py-10 flex flex-col max-w-[1200px] w-full">
+      <div className="py-10 flex flex-col max-w-5xl w-full">
           <h1 className="w-max text-3xl font-bold bg-gradient-to-r from-blue-700 via-blue-500-500 to-cyan-300 bg-[length:50%_6px] bg-left-bottom bg-no-repeat pb-[6px]">About me</h1>
           <p className="py-3">
             My name is <span className="text-blue-300">Itamar</span> and I&apos;m a front-end developer, with a passion for building interfaces. I love learning new technologies and frameworks. </p> 

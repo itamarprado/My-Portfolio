@@ -6,11 +6,11 @@ const Presentation = () => {
   return (
     <div className="bg-presentation bg-cover w-full h-[100vh] relative bg-center">
       {/* Gradient */}
-      <div className="flex flex-col w-full h-[100vh] bg-gradient-to-b from-transparent to-neutral-900 items-center justify-center px-5">
+      <div className="flex flex-col w-full h-[100vh] bg-gradient-to-b from-transparent to-midnight items-center justify-center px-5">
         {/* First section (Social, Presentation) */}
-        <div className="flex flex-col w-full max-w-[1200px] md:flex-row items-center">
+        <div className="flex flex-col w-full max-w-5xl md:flex-row items-center">
           {/* Text content */}
-          <div className="md:flex-start md:max-w-[50%]">
+          <div className="md:flex-start md:max-w-[60%] md:pt-[64px] lg:pt-0">
             <div className="flex gap-5 items-start w-full pb-2">
               <a href="https://github.com/itamarprado" target="_blank">
                 <FaGithub

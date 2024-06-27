@@ -3,7 +3,7 @@ import { FaGithub, FaTelegram, FaDiscord, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center w-full bg-gradient-to-t from-neutral-800 to-neutral-900 border-t-[1px] border-neutral-700 px-5 py-10">
-      <div className="flex flex-col gap-5 w-full max-w-[1200px] justify-between sm:flex-row">
+      <div className="flex flex-col gap-5 w-full max-w-5xl justify-between sm:flex-row">
         <div>
           <h1 className="text-2xl font-semibold pb-10 bg-gradient-to-r from-sky-500 to-sky-300 bg-clip-text text-transparent">
             Nice to see you here!
