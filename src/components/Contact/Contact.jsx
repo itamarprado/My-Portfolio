@@ -2,8 +2,9 @@ import { FaTelegram, FaDiscord, FaLinkedin } from "react-icons/fa";
 import { TbClick } from "react-icons/tb";
 import ContactForm from "../ContactForm/ContactForm";
 import tw from "tailwind-styled-components";
+import socialMedia from "../../data/socialMedia";
 
-const SocialMedia = tw.div`
+const SocialMedia = tw.a`
     flex
     flex-col
     items-center
@@ -38,15 +39,15 @@ const Contact = () => {
               </div>
 
               <div className="flex justify-center px-3 py-3 gap-5 lg:items-center">
-                <SocialMedia>
+                <SocialMedia href={socialMedia.Telegram} target="_blank">
                   <FaTelegram size={30} />
                   <p>Telegram</p>
                 </SocialMedia>
-                <SocialMedia>
+                <SocialMedia href={socialMedia.Discord} target="_blank">
                   <FaDiscord size={30} />
                   <p>Discord</p>
                 </SocialMedia>
-                <SocialMedia>
+                <SocialMedia href={socialMedia.Linkedin} target="_blank">
                   <FaLinkedin size={30} />
                   <p>Linkedin</p>
                 </SocialMedia>

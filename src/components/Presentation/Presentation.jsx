@@ -1,6 +1,7 @@
 import { FaGithub, FaTelegram, FaDiscord, FaLinkedin } from "react-icons/fa";
 import { PiArrowRightLight } from "react-icons/pi";
 import { Link } from "react-scroll";
+import socialMedia from '../../data/socialMedia'
 
 const Presentation = () => {
   return (
@@ -12,27 +13,27 @@ const Presentation = () => {
           {/* Text content */}
           <div className=" flex flex-col justify-center md:h-auto md:flex-start md:max-w-[50%] md:pt-0 md:">
             <div className="flex gap-5 items-start w-full pb-2">
-              <a href="https://github.com/itamarprado" target="_blank">
+              <a href={socialMedia.Github} target="_blank">
                 <FaGithub
                   size={25}
                   className="cursor-pointer hover:text-sky-500"
                 />
               </a>
               {/* TO DO: ADD TELEGRAM LINK */}
-              <a href="" target="_blank">
+              <a href={socialMedia.Telegram} target="_blank">
                 <FaTelegram
                   size={25}
                   className="cursor-pointer hover:text-sky-500"
                 />
               </a>
-              <a href="https://discord.gg/HAsTvyBr" target="_blank">
+              <a href={socialMedia.Discord} target="_blank">
                 <FaDiscord
                   size={25}
                   className="cursor-pointer hover:text-sky-500"
                 />
               </a>
               <a
-                href="https://www.linkedin.com/in/itamarprado/"
+                href={socialMedia.Linkedin}
                 target="_blank"
               >
                 <FaLinkedin
