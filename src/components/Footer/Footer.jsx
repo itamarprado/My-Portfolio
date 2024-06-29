@@ -1,4 +1,5 @@
 import { FaGithub, FaTelegram, FaDiscord, FaLinkedin } from "react-icons/fa";
+import socialMedia from "../../data/socialMedia";
 
 const Footer = () => {
   return (
@@ -14,16 +15,16 @@ const Footer = () => {
         </div>
         <div className="flex items-end">
           <div className="flex gap-2 text-2xl justify-center">
-            <a href="https://github.com/itamarprado" target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
+            <a href={socialMedia.Github} target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
               <FaGithub />
             </a>
-            <a href="" target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
+            <a href={socialMedia.Telegram} target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
               <FaTelegram />
             </a>
-            <a href="https://discord.gg/HAsTvyBr" target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
+            <a href={socialMedia.Discord} target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
               <FaDiscord />
             </a>
-            <a href="https://www.linkedin.com/in/itamarprado/" target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
+            <a href={socialMedia.Linkedin} target="_blank" className="p-2 bg-neutral-700 rounded-xl cursor-pointer from-sky-300 to-sky-700 hover:bg-gradient-to-br hover: hover:text-neutral-900 duration-300">
               <FaLinkedin />
             </a>
           </div>
