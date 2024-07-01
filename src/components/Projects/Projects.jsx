@@ -1,4 +1,3 @@
-// import { FaHtml5, FaCss3, FaReact, FaAngular, FaFigma } from "react-icons/fa";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import data from "../../data/projectsData";
 
@@ -15,7 +14,9 @@ const Projects = () => {
         </div>
         <div className="flex flex-wrap">
           {data.map((project) => {
+            console.log(project.id, project.title)
             return <ProjectCard
+                    id={project.id}
                     title={project.title}
                     desc={project.desc}
                     skills={project.skills}
