@@ -16,7 +16,7 @@ const ProjectCard = ({ title, desc, skills, imgUrl }) => {
             return <img src={icon[1]} className="max-w-6" key={icon[0]} />;
           })}
         </div>
-        <div className="font-light">{desc}</div>
+        <div className="font-light">{desc.length > 70 ? desc.substring(0,100) + "..." : desc}</div>
       </div>
     </div>
   );
