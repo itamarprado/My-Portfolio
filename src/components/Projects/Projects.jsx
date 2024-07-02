@@ -14,7 +14,6 @@ const Projects = () => {
         </div>
         <div className="flex flex-wrap">
           {data.map((project) => {
-            console.log(project.id, project.title)
             return <ProjectCard
                     id={project.id}
                     title={project.title}
