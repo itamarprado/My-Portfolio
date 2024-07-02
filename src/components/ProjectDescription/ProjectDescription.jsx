@@ -1,17 +1,22 @@
 import data from "../../data/projectsData";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import { useParams } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { useParams, Link } from "react-router-dom";
 
 const ProjectDescription = () => {
-  const { id } = useParams()
-  const projectData = data.find((x) => x.id === parseInt(id))
+  const { id } = useParams();
+  const projectData = data.find((x) => x.id === parseInt(id));
 
   const { title, desc, detailedInfo, gitHubUrl, webUrl, skills } = projectData;
 
   return (
-    <div className="flex flex-col sm:flex-col justify-center items-center py-[120px] px-5">
+    <div className="flex flex-col sm:flex-col items-center py-[120px] px-5">
       <div className="max-w-5xl">
+        <Link to="/" className="flex w-max items-center gap-2 py-2 text-neutral-300 hover:text-blue-400">
+          <IoMdArrowRoundBack size={25} className="text-blue-400"/>
+          Go back
+        </Link>
         <h1 className="text-4xl">{title}</h1>
         <div className="flex flex-col w-full gap-5">
           <div className="sm:w-3/4">
@@ -60,14 +65,24 @@ const ProjectDescription = () => {
           {/* Detailed Information */}
           <div className="pt-5">
             <h1 className="text-base text-sky-400">Overview</h1>
-            <h1 className="text-xl pb-3">{detailedInfo.sections.overview.objective.title}</h1>
-            <p className="sm:max-w-[80%]">{detailedInfo.sections.overview.objective.content}</p>
-            <h1 className="text-xl pb-3 pt-10">{detailedInfo.sections.overview.targetAudience.title}</h1>
-            <p className="sm:max-w-[80%]">{detailedInfo.sections.overview.targetAudience.content}</p>
+            <h1 className="text-xl pb-3">
+              {detailedInfo.sections.overview.objective.title}
+            </h1>
+            <p className="sm:max-w-[80%]">
+              {detailedInfo.sections.overview.objective.content}
+            </p>
+            <h1 className="text-xl pb-3 pt-10">
+              {detailedInfo.sections.overview.targetAudience.title}
+            </h1>
+            <p className="sm:max-w-[80%]">
+              {detailedInfo.sections.overview.targetAudience.content}
+            </p>
           </div>
           <div className="pt-5">
             <h1 className="text-base text-sky-400">Design</h1>
-            <h1 className="text-xl pb-3">{detailedInfo.sections.design.wireframe.title}</h1>
+            <h1 className="text-xl pb-3">
+              {detailedInfo.sections.design.wireframe.title}
+            </h1>
             <img
               src={detailedInfo.sections.design.wireframe.img}
               alt="Wireframe"
