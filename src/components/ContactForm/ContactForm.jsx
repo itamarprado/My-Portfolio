@@ -1,8 +1,15 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
+import tw from "tailwind-styled-components";
+
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
-import tw from "tailwind-styled-components";
+import { useState } from "react";
+
+import Lottie from "react-lottie";
+import animationLoading from "/public/animations/animationLoading.json";
+import animationSuccess from "/public/animations/animationSuccess.json";
 
 // Styles for error messages
 const ErrorMessage = tw.span`
@@ -36,18 +43,40 @@ const contactSchema = z.object({
     .max(200, "I'm sorry, the maximum number of characters was exceeded!"),
 });
 
+const loadingOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationLoading,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
+const successOptions = {
+  loop: false,
+  autoplay: true,
+  animationData: animationSuccess,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
 const ContactForm = () => {
   // Form validation with Zod and hook-forms (zod resolver and useForm utilities)
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: zodResolver(contactSchema),
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   //Submit action
-  const sendMessage = (formData) => {
+  const sendMessage = async (formData) => {
     // Pattern to match the email template of EmailJS
     const templateParams = {
       sender_name: formData.name,
@@ -57,24 +86,38 @@ const ContactForm = () => {
     };
 
     // Send email with EmailJS
-    emailjs
-      .send(
+    try {
+      setIsLoading(true);
+
+      const response = await emailjs.send(
         "service_eddtvzz",
         "template_0vn16am",
         templateParams,
         "PmNL17DN1t0A30sUr"
-      )
-      .then((res) => {
-        console.log("Email sent successfully!", res.status, res.text);
-        alert("Email sent successfully!");
-      }, (err) => {
-        console.log(err.message, err.code)
-      });
+      );
+      setIsLoading(false);
+      setSuccess(true);
+
+      setTimeout(() => {
+        setSuccess(false),
+          reset({ name: "", message: "", subject: "", email: "" });
+      }, 3000);
+
+      console.log("Success", "\nStatus: " + response.status);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div className="py-3">
-      <div className="w-full bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl p-[2px]">
+      <div
+        className={`${
+          success
+            ? "from-emerald-500 to-green-500"
+            : "from-blue-500 to-cyan-500"
+        } w-full bg-gradient-to-br rounded-xl p-[1px]`}
+      >
         <div className="flex flex-col w-full h-full bg-neutral-900 bg-opacity-95 rounded-xl pt-5 pb-10 px-6 gap-2">
           <div className="self-center pb-2 text-lg font-light">
             Send a direct message!
@@ -132,9 +175,32 @@ const ContactForm = () => {
                 <ErrorMessage>{errors.message.message}</ErrorMessage>
               )}
             </div>
-            <div className="flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg p-[1px] mt-3">
-              <button className="w-full h-full bg-neutral-800 px-6 py-2 rounded-lg bg-opacity-95 font-bold hover:bg-opacity-0 duration-300">
-                Submit
+            <div
+              className={`h-12 flex items-center justify-center w-full bg-gradient-to-r ${isLoading ? "from-blue-500 to-cyan-500" : success
+                ? "from-emerald-400 to-green-500"
+                : "from-blue-500 to-cyan-500"}
+                  rounded-lg p-[1px] mt-3`}
+            >
+              <button
+                className={`${
+                  isLoading ? "!bg-opacity-0" : success ? "!bg-opacity-0" : ""
+                } flex justify-center items-center w-full h-full bg-neutral-800 px-6 rounded-lg bg-opacity-95 font-bold duration-300 hover:bg-opacity-0`}
+              >
+                {/*  */}
+                <p className="bg-transparent">
+                  {isLoading ? (
+                    <div className="h-full">
+                      <Lottie options={loadingOptions} height={70} direction={-1}/>
+                    </div>
+                  ) 
+                  : success ? (
+                    <div className="h-full">
+                      <Lottie options={successOptions} height={48} />
+                    </div>
+                  ) :
+                      "Submit"
+                  }
+                </p>
               </button>
             </div>
           </form>
