@@ -1,6 +1,6 @@
 import { FaGithub, FaTelegram, FaDiscord, FaLinkedin } from "react-icons/fa";
 import socialMedia from "../../data/socialMedia";
-import stickerCoffee from "../../../public/images/sticker-coffee.png"
+import stickerCoffee from "/images/sticker-coffee.png"
 
 const Footer = () => {
   return (
