@@ -5,7 +5,7 @@ import socialMedia from '../../data/socialMedia'
 
 const Presentation = () => {
   return (
-    <div className="bg-presentation bg-cover w-full min-h-[100vh] relative bg-center sm:pt-0">
+    <div id="Home" className="bg-presentation bg-cover w-full min-h-[100vh] relative bg-center sm:pt-0">
       {/* Gradient */}
       <div className="flex flex-col w-full min-h-[100vh] bg-gradient-to-b from-transparent to-midnight items-center md:justify-center px-5">
         {/* First section (Social, Presentation) */}
