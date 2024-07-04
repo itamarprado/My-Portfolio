@@ -24,8 +24,8 @@ const ProjectDescription = () => {
   const { title, desc, detailedInfo, gitHubUrl, webUrl, skills } = projectData;
 
   return (
-    <div className="flex flex-col sm:flex-col items-center py-[120px] px-5">
-      <div className="max-w-5xl">
+    <div className="flex flex-col items-center py-20 md:py-[120px] px-5">
+      <div className="w-full max-w-5xl">
         <Link to="/" onClick={handleNavigation} className="flex w-max items-center gap-2 py-2 text-neutral-300 hover:text-blue-400">
           <IoMdArrowRoundBack size={25} className="text-blue-400"/>
           Go back
