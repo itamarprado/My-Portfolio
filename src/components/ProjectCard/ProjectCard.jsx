@@ -6,7 +6,7 @@ const ProjectCard = ({id, title, desc, skills, imgUrl }) => {
 
   return (
     <div className="flex flex-col w-full sm:w-1/2 lg:w-1/3 p-4 ">
-      <Link to={`/${id}`} className="w-full h-52 opacity-70 cursor-pointer duration-300 hover:scale-[103%] hover:opacity-100">
+      <Link to={`project/${id}`} className="w-full h-52 opacity-70 cursor-pointer duration-300 hover:scale-[103%] hover:opacity-100">
         <img src={imgUrl} alt="" className="w-full h-full object-cover" />
       </Link>
       <div className="h-auto">
