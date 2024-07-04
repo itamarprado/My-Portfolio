@@ -9,7 +9,7 @@ const Footer = () => {
           <h1 className="text-2xl font-semibold bg-gradient-to-r from-sky-500 to-sky-300 bg-clip-text text-transparent">
             Nice to see you here!
           </h1>
-          <img src="./public/images/sticker-coffee.png" alt="My Bitmoji carrying a giant coffee" className="max-h-20 sm:max-h-44"/>
+          <img src="./images/sticker-coffee.png" alt="My Bitmoji carrying a giant coffee" className="max-h-20 sm:max-h-44"/>
         </div>
         <div className="flex flex-col-reverse w-full sm:flex-row items-center gap-3 justify-between">
           <div className="flex flex-col items-center">
