@@ -44,7 +44,7 @@ const Presentation = () => {
             </div>
             <div className="flex flex-col w-full self-start pb-5 max-w-[360px]">
               <h1 className="text-4xl font-bold self-start w-max bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-300 bg-[length:40%_3px] bg-left-bottom bg-no-repeat pb-[6px]">
-                Front-end
+                Full-stack
               </h1>
               <h1 className="text-5xl font-bold bg-gradient-to-r from-sky-600 to-sky-200 bg-clip-text text-transparent">
                 Developer
@@ -55,7 +55,7 @@ const Presentation = () => {
               <p>
                 <strong>Welcome to my portfolio</strong>
               </p>
-              I&apos;m Itamar, a front-end developer with focus on Web
+              I&apos;m Itamar, a full-stack developer with focus on Web
               Development. I&apos;m building my career path by learning new
               technologies and building solo projects to showcase my skills.
             </div>
