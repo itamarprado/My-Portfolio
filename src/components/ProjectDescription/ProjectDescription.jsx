@@ -98,7 +98,7 @@ const ProjectDescription = () => {
             </h1>
             <img
               src={detailedInfo.sections.design.wireframe.img}
-              alt="Wireframe"
+              alt={detailedInfo.sections.design.wireframe.alt}
               className="sm:w-3/4 border-[1px] rounded-sm"
             />
           </div>
