@@ -21,7 +21,7 @@ const Menu = () => {
       navigate(path);
       setTimeout(() => {
         scroll.scrollTo(document.getElementById(id).offsetTop - menuSize)
-      }, 300); // Ajuste esse timeout conforme necessário
+      }, 100);
     }
     setIsOpen(false)
   }
@@ -41,6 +41,9 @@ const Menu = () => {
         {/* Verify screen size to change to mobile/desktop version */}
         <nav className={`${isOpen ? "flex" : "hidden sm:!flex"} pb-8 bg-midnight absolute top-full left-0 flex-col w-full items-center sm:gap-3 sm:flex-row sm:relative sm:w-max sm:left-0 sm:pb-0 sm:bg-transparent`}>
           
+            <Link to="Home" onClick={() => handleNavigation('/', 'Home')} className="p-2 cursor-pointer border-b-2 border-blue-400 border- sm:border-b-transparent hover:border-b-blue-400 hover:text-blue-400">
+              Home
+            </Link> 
             <Link to="About" onClick={() => handleNavigation('/', 'About')} className="p-2 cursor-pointer border-b-2 border-blue-400 border- sm:border-b-transparent hover:border-b-blue-400 hover:text-blue-400">
               About
             </Link> 
