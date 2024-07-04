@@ -3,8 +3,21 @@ import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useParams, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { animateScroll as scroll } from 'react-scroll'
+
+const menuSize = 64
 
 const ProjectDescription = () => {
+  const navigate = useNavigate()
+  
+  const handleNavigation = () => {
+      navigate("/");
+      setTimeout(() => {
+        scroll.scrollTo(document.getElementById("Projects").offsetTop - menuSize)
+      }, 100);
+  }
+
   const { id } = useParams();
   const projectData = data.find((x) => x.id === parseInt(id));
 
@@ -13,7 +26,7 @@ const ProjectDescription = () => {
   return (
     <div className="flex flex-col sm:flex-col items-center py-[120px] px-5">
       <div className="max-w-5xl">
-        <Link to="/" className="flex w-max items-center gap-2 py-2 text-neutral-300 hover:text-blue-400">
+        <Link to="/" onClick={handleNavigation} className="flex w-max items-center gap-2 py-2 text-neutral-300 hover:text-blue-400">
           <IoMdArrowRoundBack size={25} className="text-blue-400"/>
           Go back
         </Link>
