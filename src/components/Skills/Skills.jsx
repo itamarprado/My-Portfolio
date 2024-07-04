@@ -80,7 +80,7 @@ const softSkills = [
 
 const Skills = () => {
   return (
-    <div id="Skills" className="flex justify-center w-full px-5">
+    <div id="Skills" className="flex flex-col items-center justify-center w-full px-5 bg-gradient-to-b from-neutral-900 to-midnight  pt-20">
       <div className="w-full max-w-5xl pb-2 flex flex-col">
         {/* Description */}
         <h1 className="w-max text-3xl font-bold bg-gradient-to-r from-blue-700 via-blue-500-500 to-cyan-300 bg-[length:80%_6px] bg-left-bottom bg-no-repeat pb-[6px]">
@@ -115,6 +115,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
+      <div className="w-[1px] h-12 mt-5 bg-white self-center"></div>
     </div>
   );
 };
