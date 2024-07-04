@@ -20,6 +20,7 @@ const Projects = () => {
                     desc={project.desc}
                     skills={project.skills}
                     imgUrl={project.imgUrl}
+                    dev={project.dev}
                     key={project.id}
                     />
           })}
